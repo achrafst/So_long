@@ -29,8 +29,6 @@ void	clean_all(t_vr *vr, int type)
 		mlx_destroy_image(vr->mlx, vr->img_w);
 	if (vr->win)
 		mlx_destroy_window(vr->mlx, vr->win);
-	if (vr->mlx)
-		free(vr->mlx);
 	free(vr);
 	if (type == EXIT_FAILURE)
 		ft_putstr_fd("ERROR\nMEMORY ALLOCATION FAILURE\n", 2);
